@@ -1,0 +1,113 @@
+<div th:fragment="content" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        <form action="/ord/add" method="post">
+            <table >
+                <tbody>
+                <tr>
+                    <td>
+                        <label for="firstName" class="form-label">Фамилия</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Иванов" value="" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="lastName" class="form-label">Имя</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Иван"  value="" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phoneNumber" class="form-label">
+                            Номер телефона</label>
+                    </td>
+                    <td>
+                        <div>
+                            <input type="text" name="phoneNumber" id="phoneNumber" placeholder="+7 999-888-7777" pattern="^\+7\s9\d{2}-\d{3}-\d{4}$" required>
+<!--                            <input type="text" id="phone" placeholder="+7 999-888-7777" name="phone" class="form-control"  />-->
+                            <span class="validity"></span>
+                        </div>
+                    </td>
+                <tr>
+                    <td>
+                        <label for="city" class="form-label">Адрес:</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="city" class="form-label">Город</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="city" id="city" placeholder="г. Москва" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="house" class="form-label">Улица</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="street" id="street" placeholder="ул. Ленина" required>
+                    </td>
+                <tr>
+
+                </tr>
+                    <td>
+                        <label for="house" class="form-label">Дом</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="house" id="house" placeholder="100" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="flat" class="form-label">Квартира</label>
+                    </td>
+                    <td>
+                        <input type="text" name="flat" id="flat" placeholder="100">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="date" class="form-label">Дата замера</label>
+                    </td>
+                    <td>
+                        <input type="datetime-local" class="form-control" name="date" id="date"  required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="countWindows" class="form-label">Количество окон</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="countWindows" id="countWindows"  pattern="^\d+$" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="comments" class="form-label">Комментарий</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="comments" id="comments" >
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Сохранить">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+       </form>
+
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div th:fragment="content" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div th:each="client : ${listClients}">
+            <div class="col">
+                <h1 th:text="'Клиент: ' + ${client.fullName}"></h1>
+                <h4 th:text="'Фамилия ' + ${client.firstName}"></h4>
+                <h4 th:text="'Имя ' + ${client.lastName}"></h4>
+                <h4 th:text="'Номер телефона ' + ${client.phoneNumber}"></h4>
+<!--                пока не будем удалять, т.к. нужно это делать каскадно, а нам нужны заявки-->
+<!--                <div>-->
+<!--                    <form th:action="'/odr/del_client' + ${client.id}" method="post">-->
+<!--                        <input type="submit" value="Удалить">-->
+<!--                    </form>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </div>
+</div>

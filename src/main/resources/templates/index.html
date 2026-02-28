@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Замер окон</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" ></script> <!-- integrity="" -->
+</head>
+<body>
+    <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pilss">
+            <li class="nav-item">
+<!--                <a href="/ord/add" class="nav-link">Добавить заявку</a>-->
+                <a th:href="@{/ord/add}" class="nav-link">Добавить заявку</a>
+            </li>
+        </ul>
+
+        <ul class="nav nav-pilss">
+            <li class="nav-item">
+<!--                <a href="/ord/reg_form" class="nav-link">Регистрация</a>-->
+                <a th:href="@{/ord/reg_form}" class="nav-link">Регистрация</a>
+            </li>
+        </ul>
+
+        <ul class="nav nav-pilss">
+            <li class="nav-item">
+<!--                <a href="/ord/login" class="nav-link">Вход</a>-->
+                <a th:href="@{/ord/login}" class="nav-link">Вход</a>
+            </li>
+        </ul>
+
+        <ul class="nav nav-pilss">
+            <li class="nav-item">
+<!--                <a href="/ord/logout" class="nav-link">Выход</a>-->
+                <a th:href="@{/ord/logout}" class="nav-link">Выход</a>
+            </li>
+        </ul>
+
+
+        <ul class="nav nav-pilss">
+            <li class="nav-item">
+<!--                <a href="/ord/list" class="nav-link">Все заявки</a>-->
+                <a th:href="@{/ord/list}" class="nav-link">Все заявки</a>
+            </li>
+        </ul>
+        <ul class="nav nav-pilss">
+            <li class="nav-item">
+<!--                <a href="/ord/clients" class="nav-link">Клиенты</a>-->
+                <a th:href="@{/ord/clients}" class="nav-link">Клиенты</a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <div th:insert="__${content}__ :: content"></div>
+    </div>
+
+</body>
+</html>

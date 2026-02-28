@@ -1,0 +1,21 @@
+<div th:fragment="content" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div th:each="order : ${listOrders}">
+            <div class="col">
+
+                <h1 th:text="'' + ${order.client.fullName}"></h1>
+                <h4 th:text="'Заказ №: ' + ${order.id}"></h4>
+                <h4 th:text="'Адрес: ' + ${order.address.toString()}"></h4>
+                <h4 th:text="'Номер телефона ' + ${order.client.phoneNumber}"></h4>
+                <h4 th:text="'Дата замера ' + ${order.date.toLocalDate()}"></h4>
+                <h4 th:text="'время замера ' + ${order.date.toLocalTime()}"></h4>
+                <h4 th:text="'Количество окон ' + ${order.countWindows}"></h4>
+                <div>
+                    <form th:action="'/ord/del/' + ${order.id}" method="post">
+                        <input type="submit" value="Удалить">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
